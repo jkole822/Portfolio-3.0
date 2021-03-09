@@ -1,7 +1,13 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-function App() {
-	return <div></div>;
-}
+const App = () => {
+	return (
+		<Switch>
+			<Route path="/" component={Landing} exact />
+			<Route path="/portfolio" component={Portfolio} exact />
+		</Switch>
+	);
+};
 
 export default App;
