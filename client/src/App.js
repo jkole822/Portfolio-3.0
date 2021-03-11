@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Landing from "./components/landing";
-import Portfolio from "./components/portfolio";
+import Landing from "./components/Landing";
+import Portfolio from "./components/Portfolio";
 
 const App = () => {
 	return (
