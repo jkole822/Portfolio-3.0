@@ -53,7 +53,7 @@ export default function Header({
 
 		return (
 			<Button href="/" color="inherit" onClick={homeButtonClick}>
-				Home
+				<Typography variant="button">Home</Typography>
 			</Button>
 		);
 	};
