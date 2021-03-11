@@ -1,0 +1,11 @@
+.connect-icons {
+	color: rgb(250, 250, 250);
+	font-size: 3rem;
+	transition: ease-in-out 250ms;
+}
+
+.connect-icons:hover {
+	color: rgb(250, 250, 250);
+	font-size: 3rem;
+	transform: scale(1.2);
+}
