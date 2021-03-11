@@ -3,7 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
+
+import "./style.css";
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -21,40 +23,28 @@ export default function Header({
 }) {
 	const classes = useStyles();
 
-	const portfolioButtonClick = event => {
-		event.preventDefault();
-
-		handlePortfolioClick();
-	};
-
-	const homeButtonClick = event => {
-		event.preventDefault();
-
-		handleHomeClick();
-	};
-
 	const renderNavButton = () => {
 		if (headerState === "Home") {
 			return (
-				<Button
-					href="/portfolio"
-					color="inherit"
-					onClick={portfolioButtonClick}
+				<Link
+					to="/portfolio"
+					onClick={handlePortfolioClick}
+					className="nav-links"
 				>
-					Portfolio
-				</Button>
+					<Typography variant="button">Portfolio</Typography>
+				</Link>
 			);
 		}
 
 		return (
-			<Button href="/" color="inherit" onClick={homeButtonClick}>
+			<Link to="/" onClick={handleHomeClick} className="nav-links">
 				<Typography variant="button">Home</Typography>
-			</Button>
+			</Link>
 		);
 	};
 	return (
 		<div className={classes.root}>
-			<AppBar position="static">
+			<AppBar id="app-bar" position="static">
 				<Toolbar>
 					<Typography variant="h6" className={classes.title}>
 						Kole Gasior

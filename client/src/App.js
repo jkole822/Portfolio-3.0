@@ -6,22 +6,28 @@ import Landing from "./components/Landing";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
 
+import "./style.css";
+
 const App = () => {
 	const [headerState, setHeaderState] = useState("Home");
 
 	return (
-		<BrowserRouter>
-			<Header
-				handleHomeClick={() => setHeaderState("Home")}
-				handlePortfolioClick={() => setHeaderState("Portfolio")}
-				headerState={headerState}
-			/>
-			<Switch>
-				<Route path="/" component={Landing} exact />
-				<Route path="/portfolio" component={Portfolio} exact />
-			</Switch>
+		<>
+			<div className="content">
+				<BrowserRouter>
+					<Header
+						handleHomeClick={() => setHeaderState("Home")}
+						handlePortfolioClick={() => setHeaderState("Portfolio")}
+						headerState={headerState}
+					/>
+					<Switch>
+						<Route path="/" component={Landing} exact />
+						<Route path="/portfolio" component={Portfolio} exact />
+					</Switch>
+				</BrowserRouter>
+			</div>
 			<Footer />
-		</BrowserRouter>
+		</>
 	);
 };
 
