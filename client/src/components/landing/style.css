@@ -1,0 +1,86 @@
+#background {
+	position: absolute;
+	top: 0;
+	background-color: rgb(255, 255, 255);
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	clip-path: polygon(0 0, 100% 0%, 100% 23%, 0 65%);
+}
+
+.shapes {
+	color: rgb(105, 105, 105);
+}
+
+#tear-one {
+	position: absolute;
+	top: 15%;
+	left: 25%;
+	font-size: 1.25rem;
+	color: rgb(25, 25, 25);
+}
+
+#tear-two {
+	position: absolute;
+	top: 40%;
+	left: 75%;
+	font-size: 3rem;
+}
+
+#tear-three {
+	position: absolute;
+	top: 80%;
+	left: 40%;
+	font-size: 1.5rem;
+}
+
+#tear-four {
+	position: absolute;
+	top: 110%;
+	left: 15%;
+	font-size: 5rem;
+}
+
+#tear-five {
+	position: absolute;
+	top: 130%;
+	left: 85%;
+	font-size: 2rem;
+}
+
+#star-one {
+	position: absolute;
+	top: 15%;
+	left: 90%;
+	font-size: 2rem;
+	color: rgb(25, 25, 25);
+}
+
+#star-two {
+	position: absolute;
+	top: 45%;
+	left: 10%;
+	font-size: 3.5rem;
+	color: rgb(25, 25, 25);
+}
+
+#star-three {
+	position: absolute;
+	top: 90%;
+	left: 80%;
+	font-size: 2.5rem;
+}
+
+#star-four {
+	position: absolute;
+	top: 140%;
+	left: 35%;
+	font-size: 1.5rem;
+}
+
+#star-five {
+	position: absolute;
+	top: 130%;
+	left: 50%;
+	font-size: 4rem;
+}
