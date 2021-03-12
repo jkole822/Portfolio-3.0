@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -12,9 +12,28 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const Project = ({ project }) => {
 	const useStyles = makeStyles({
+		cardContent: {
+			color: "rgb(250, 250, 250)",
+			backgroundColor: "rgb(65, 65, 65)",
+		},
+		header: {
+			fontFamily: "Lato, sans-serif",
+			fontSize: "1.25rem",
+			fontWeight: "bold",
+			letterSpacing: "0.05em",
+			color: "#267AFE",
+		},
+		techHeader: {
+			fontSize: "1rem",
+			fontWeight: "bold",
+			textTransform: "uppercase",
+			letterSpacing: "0.05em",
+			opacity: 0.7,
+			marginBottom: 4,
+		},
 		projectButton: {
 			color: "rgb(250, 250, 250)",
-			backgroundColor: "rgb(50, 50, 50)",
+			backgroundColor: "#1A62D4",
 		},
 	});
 
@@ -23,20 +42,14 @@ const Project = ({ project }) => {
 	const renderTechnology = project => {
 		const tech = project.technology.map(skill => {
 			return (
-				<Typography
-					key={skill}
-					variant="body2"
-					color="textSecondary"
-					component="p"
-					align="center"
-				>
+				<Typography key={skill} align="center">
 					{skill}
 				</Typography>
 			);
 		});
 		return (
 			<Box mt={2}>
-				<Typography variant="body1" component="p" align="center">
+				<Typography gutterBottom align="center" className={classes.techHeader}>
 					Technology
 				</Typography>
 				{tech}
@@ -51,13 +64,11 @@ const Project = ({ project }) => {
 					component="img"
 					src={`data:image/png;base64,${project.image.toString("base64")}`}
 				/>
-				<CardContent>
-					<Typography gutterBottom variant="h5" component="h2">
+				<CardContent className={classes.cardContent}>
+					<Typography gutterBottom align="center" className={classes.header}>
 						{project.title}
 					</Typography>
-					<Typography variant="body2" color="textSecondary" component="p">
-						{project.description}
-					</Typography>
+					<Typography align="center">{project.description}</Typography>
 
 					{project.technology.length ? renderTechnology(project) : null}
 
@@ -66,6 +77,7 @@ const Project = ({ project }) => {
 							<Button
 								className={classes.projectButton}
 								href={project.github}
+								color="primary"
 								target="_blank"
 								rel="noreferrer"
 								variant="contained"
@@ -78,6 +90,7 @@ const Project = ({ project }) => {
 						<Button
 							className={classes.projectButton}
 							href={project.project_link}
+							color="primary"
 							target="_blank"
 							rel="noreferrer"
 							variant="contained"

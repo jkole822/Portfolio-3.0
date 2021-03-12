@@ -12,6 +12,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const Portfolio = () => {
 	const useStyles = makeStyles({
+		header: {
+			fontFamily: "Lato, sans-serif",
+		},
 		spinner: {
 			display: "flex",
 			alignItems: "center",
@@ -49,7 +52,9 @@ const Portfolio = () => {
 	return (
 		<Container>
 			<Box align="center" mt={10}>
-				<Typography variant="h2">Portfolio</Typography>
+				<Typography variant="h2" className={classes.header}>
+					Portfolio
+				</Typography>
 			</Box>
 			<Box my={10}>
 				<Grid container justify="center" alignItems="flex-end" spacing={8}>
