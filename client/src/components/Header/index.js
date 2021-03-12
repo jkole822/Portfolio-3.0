@@ -1,8 +1,9 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
 import "./style.css";
@@ -16,32 +17,9 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default function Header({
-	headerState,
-	handleHomeClick,
-	handlePortfolioClick,
-}) {
+export default function Header() {
 	const classes = useStyles();
 
-	const renderNavButton = () => {
-		if (headerState === "Home") {
-			return (
-				<Link
-					to="/portfolio"
-					onClick={handlePortfolioClick}
-					className="nav-links"
-				>
-					<Typography variant="button">Portfolio</Typography>
-				</Link>
-			);
-		}
-
-		return (
-			<Link to="/" onClick={handleHomeClick} className="nav-links">
-				<Typography variant="button">Home</Typography>
-			</Link>
-		);
-	};
 	return (
 		<div className={classes.root}>
 			<AppBar id="app-bar" position="static">
@@ -49,8 +27,14 @@ export default function Header({
 					<Typography variant="h6" className={classes.title}>
 						Kole Gasior
 					</Typography>
-
-					{renderNavButton()}
+					<Box mr={5}>
+						<Link to="/portfolio" className="nav-links">
+							<Typography variant="button">Portfolio</Typography>
+						</Link>
+					</Box>
+					<Link to="/" className="nav-links">
+						<Typography variant="button">Home</Typography>
+					</Link>
 				</Toolbar>
 			</AppBar>
 		</div>

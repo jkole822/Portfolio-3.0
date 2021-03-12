@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Header from "./components/Header";
@@ -9,17 +9,11 @@ import Footer from "./components/Footer";
 import "./style.css";
 
 const App = () => {
-	const [headerState, setHeaderState] = useState("Home");
-
 	return (
 		<>
 			<div className="content">
 				<BrowserRouter>
-					<Header
-						handleHomeClick={() => setHeaderState("Home")}
-						handlePortfolioClick={() => setHeaderState("Portfolio")}
-						headerState={headerState}
-					/>
+					<Header />
 					<Switch>
 						<Route path="/" component={Landing} exact />
 						<Route path="/portfolio" component={Portfolio} exact />
