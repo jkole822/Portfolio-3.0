@@ -6,10 +6,20 @@ import Landing from "./components/Landing.js";
 import Portfolio from "./components/Portfolio.js";
 import Footer from "./components/Footer.js";
 
+import { makeStyles } from "@material-ui/core/styles";
+
 const App = () => {
+	const useStyles = makeStyles({
+		content: {
+			minHeight: "100vh",
+		},
+	});
+
+	const classes = useStyles();
+
 	return (
 		<>
-			<div className="content">
+			<div className={classes.content}>
 				<BrowserRouter>
 					<Header />
 					<Switch>
