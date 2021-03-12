@@ -10,9 +10,18 @@ import Typography from "@material-ui/core/Typography";
 import { GitHub } from "@material-ui/icons";
 import axios from "axios";
 
-import "./style.css";
+import { makeStyles } from "@material-ui/core/styles";
 
 const Portfolio = () => {
+	const useStyles = makeStyles({
+		projectButton: {
+			color: "rgb(250, 250, 250)",
+			backgroundColor: "rgb(50, 50, 50)",
+		},
+	});
+
+	const classes = useStyles();
+
 	const [projects, setProjects] = useState([]);
 
 	useEffect(() => {
@@ -73,7 +82,7 @@ const Portfolio = () => {
 								<Box align="center" my={3}>
 									<Box mb={2}>
 										<Button
-											className="project-button"
+											className={classes.projectButton}
 											href={project.github}
 											target="_blank"
 											rel="noreferrer"
@@ -85,7 +94,7 @@ const Portfolio = () => {
 									</Box>
 
 									<Button
-										className="project-button"
+										className={classes.projectButton}
 										href={project.project_link}
 										target="_blank"
 										rel="noreferrer"

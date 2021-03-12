@@ -1,12 +1,10 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import Landing from "./components/Landing";
-import Portfolio from "./components/Portfolio";
-import Footer from "./components/Footer";
-
-import "./style.css";
+import Header from "./components/Header.js";
+import Landing from "./components/Landing.js";
+import Portfolio from "./components/Portfolio.js";
+import Footer from "./components/Footer.js";
 
 const App = () => {
 	return (

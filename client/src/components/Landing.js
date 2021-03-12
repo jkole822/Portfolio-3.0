@@ -1,8 +1,7 @@
 import React from "react";
 
-import About from "../About";
-import Skills from "../Skills";
-import "./style.css";
+import About from "./About.js";
+import Skills from "./Skills.js";
 
 const Landing = () => {
 	return (
