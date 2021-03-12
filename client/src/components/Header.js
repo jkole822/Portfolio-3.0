@@ -3,26 +3,26 @@ import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const useStyles = makeStyles(theme => ({
-	root: {
-		flexGrow: 1,
-	},
-	title: {
-		flexGrow: 1,
-	},
-	appBar: {
-		backgroundColor: "rgb(65, 65, 65)",
-	},
-	navLinks: {
-		color: "rgb(250, 250, 250)",
-		textDecoration: "none",
-	},
-}));
+import { makeStyles } from "@material-ui/core/styles";
 
 export default function Header() {
+	const useStyles = makeStyles(theme => ({
+		root: {
+			flexGrow: 1,
+		},
+		title: {
+			flexGrow: 1,
+		},
+		appBar: {
+			backgroundColor: "rgb(65, 65, 65)",
+		},
+		navLinks: {
+			color: "rgb(250, 250, 250)",
+			textDecoration: "none",
+		},
+	}));
 	const classes = useStyles();
 
 	return (
@@ -33,13 +33,13 @@ export default function Header() {
 						Kole Gasior
 					</Typography>
 					<Box mr={5}>
-						<Link to="/portfolio" className={classes.navLinks}>
+						<NavLink to="/portfolio" className={classes.navLinks}>
 							<Typography variant="button">Portfolio</Typography>
-						</Link>
+						</NavLink>
 					</Box>
-					<Link to="/" className={classes.navLinks}>
+					<NavLink to="/" className={classes.navLinks}>
 						<Typography variant="button">Home</Typography>
-					</Link>
+					</NavLink>
 				</Toolbar>
 			</AppBar>
 		</div>

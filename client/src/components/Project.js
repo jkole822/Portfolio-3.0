@@ -58,7 +58,7 @@ const Project = ({ project }) => {
 	};
 
 	return (
-		<Grid key={project.title} item xs={12} md={3}>
+		<Grid item xs={12} md={3}>
 			<Card>
 				<CardMedia
 					component="img"

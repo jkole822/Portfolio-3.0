@@ -38,7 +38,7 @@ const Portfolio = () => {
 	const renderProjects = () => {
 		if (projects.length) {
 			return projects.map(project => {
-				return <Project project={project} />;
+				return <Project key={project.title} project={project} />;
 			});
 		}
 
