@@ -4,7 +4,7 @@
 
 ## Description
 
-My web development project portfolio. Portfolio projects are managed with a separate Project Manager.
+My web development project portfolio. Portfolio projects are managed with a separate [Project Manager](https://github.com/jkole822/Portfolio-Project-Manager).
 
 ## Table of Contents
 
@@ -22,6 +22,16 @@ My web development project portfolio. Portfolio projects are managed with a sepa
 ### Portfolio
 
 ![Portfolio](/client/public/images/Portfolio.png)
+
+### Technology
+
+- React
+- React Hooks
+- Node
+- Express
+- MongoDB
+- Mongoose
+- Material UI
 
 ## Questions
 
