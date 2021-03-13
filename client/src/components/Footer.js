@@ -20,6 +20,7 @@ const Footer = () => {
 			transition: "transform 500ms",
 			"&:hover": {
 				transform: "scale(1.3)",
+				color: "#267AFE",
 			},
 		},
 	});
