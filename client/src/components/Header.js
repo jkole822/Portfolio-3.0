@@ -19,8 +19,11 @@ export default function Header() {
 			backgroundColor: "rgb(65, 65, 65)",
 		},
 		navLinks: {
+			fontFamily: "Roboto, sans-serif",
 			color: "rgb(250, 250, 250)",
 			textDecoration: "none",
+			textTransform: "uppercase",
+			letterSpacing: "0.05em",
 		},
 	}));
 	const classes = useStyles();
@@ -33,12 +36,27 @@ export default function Header() {
 						Kole Gasior
 					</Typography>
 					<Box mr={5}>
-						<NavLink to="/portfolio" className={classes.navLinks}>
-							<Typography variant="button">Portfolio</Typography>
+						<NavLink
+							to="/portfolio"
+							className={classes.navLinks}
+							activeStyle={{
+								color: "#267AFE",
+								fontWeight: 700,
+							}}
+						>
+							Portfolio
 						</NavLink>
 					</Box>
-					<NavLink to="/" className={classes.navLinks}>
-						<Typography variant="button">Home</Typography>
+					<NavLink
+						to="/"
+						className={classes.navLinks}
+						activeStyle={{
+							color: "#267AFE",
+							fontWeight: 700,
+						}}
+						exact
+					>
+						Home
 					</NavLink>
 				</Toolbar>
 			</AppBar>
